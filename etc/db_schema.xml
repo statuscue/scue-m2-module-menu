@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="scue_menu_items" resource="default" engine="innodb" comment="A list of menu items">
+        <column xsi:type="smallint" name="menu_item_id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Display name on the storefront"/>
+        <column xsi:type="smallint" name="parent_id" unsigned="true" nullable="false" identity="false" comment="Parent menu item ID"/>
+        <column xsi:type="varchar" name="css_class" nullable="false" length="255" comment="CSS class applicable on the storefront"/>
+        <column xsi:type="smallint" name="sort_order" unsigned="false" nullable="false" identity="false" default="10" comment="Menu item sort order"/>
+        <column xsi:type="varchar" name="entity_type" nullable="false" length="255" default="custom" comment="Link type like category, page, custom, etc"/>
+        <column xsi:type="int" name="related_entity_id" unsigned="true" nullable="true" identity="false" comment="Related entity ID, like category, page, etc"/>
+        <column xsi:type="varchar" name="custom_link" nullable="true" length="1024" comment="Custom link"/>
+        <column xsi:type="timestamp" name="creation_time" nullable="false" default="CURRENT_TIMESTAMP" comment="Menu Item creation time"/>
+        <column xsi:type="timestamp" name="update_time" nullable="false" default="CURRENT_TIMESTAMP" comment="Menu Item modification time"/>
+        <column xsi:type="smallint" name="store_id" unsigned="true" nullable="false" identity="false" comment="Store ID"/>
+        <column xsi:type="varchar" name="bg_color" nullable="true" length="7" comment="Background color"/>
+        <column xsi:type="varchar" name="bg_image" nullable="true" comment="Path to uploaded background image"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="menu_item_id"/>
+        </constraint>
+        <index referenceId="SCUE_MENU_ITEMS_PARENT_ID" indexType="btree">
+            <column name="parent_id"/>
+        </index>
+        <index referenceId="SCUE_MENU_ITEMS_TITLE" indexType="fulltext">
+            <column name="title"/>
+        </index>
+    </table>
+    <table name="scue_menu_banners" resource="default" engine="innodb" comment="A list of banners">
+        <column xsi:type="smallint" name="banner_id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="smallint" name="menu_item_id" unsigned="true" nullable="true" identity="false" comment="Related Menu Item Id"/>
+        <column xsi:type="varchar" name="path" nullable="false" comment="Path to uploaded image"/>
+        <column xsi:type="varchar" name="description" nullable="false" length="500" comment="Description"/>
+        <column xsi:type="tinyint" name="is_active" unsigned="true" nullable="false" default="0" comment="Banner status"/>
+        <column xsi:type="varchar" name="entity_type" nullable="false" length="255" default="custom" comment="Link type like category, page, custom, etc"/>
+        <column xsi:type="int" name="related_entity_id" unsigned="true" nullable="true" identity="false" comment="Related entity ID, like category, page, etc"/>
+        <column xsi:type="varchar" name="custom_link" nullable="true" length="1024" comment="Custom link"/>
+        <column xsi:type="timestamp" name="creation_time" nullable="false" default="CURRENT_TIMESTAMP" comment="Creation time"/>
+        <column xsi:type="timestamp" name="update_time" nullable="false" default="CURRENT_TIMESTAMP" comment="Modification time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="banner_id"/>
+        </constraint>
+        <index referenceId="SCUE_MENU_BANNERS_BTREE" indexType="btree">
+            <column name="menu_item_id"/>
+            <column name="is_active"/>
+        </index>
+        <index referenceId="SCUE_MENU_BANNERS_FT" indexType="fulltext">
+            <column name="description"/>
+        </index>
+        <constraint xsi:type="foreign"
+                    referenceId="SCUE_MENU_BANNERS_BANNER_ID_SCUE_MENU_ITEMS_ID"
+                    table="scue_menu_banners" column="menu_item_id"
+                    referenceTable="scue_menu_items" referenceColumn="menu_item_id"
+                    onDelete="SET NULL"/>
+    </table>
+</schema>

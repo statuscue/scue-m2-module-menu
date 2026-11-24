@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Scue_Menu::menu" title="Mega Menu" translate="title" module="Scue_Menu" parent="Magento_Backend::content" sortOrder="160" resource="Scue_Menu::menu"/>
+        <add id="Scue_Menu::items" title="Menu Items" translate="title" module="Scue_Menu" parent="Scue_Menu::menu" resource="Scue_Menu::items" action="scue_menu/item/index" sortOrder="10"/>
+        <add id="Scue_Menu::banners" title="Banners" translate="title" module="Scue_Menu" parent="Scue_Menu::menu" resource="Scue_Menu::banner" action="scue_menu/banner/index" sortOrder="30"/>
+    </menu>
+</config>

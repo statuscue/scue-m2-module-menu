@@ -1,0 +1,86 @@
+Back,Back
+"Delete Banner","Delete Banner"
+"Are you sure you want to do this?","Are you sure you want to do this?"
+Save,Save
+"Save & Close","Save & Close"
+"Delete Menu Item","Delete Menu Item"
+"Save & Duplicate","Save & Duplicate"
+"You deleted the banner.","You deleted the banner."
+"We can't find a banner to delete.","We can't find a banner to delete."
+"You disabled a banner with ID #%1.","You disabled a banner with ID #%1."
+"We can't find a banner to disable.","We can't find a banner to disable."
+Banner,Banner
+"You enabled a banner with ID #%1.","You enabled a banner with ID #%1."
+"We can't find a banner to enable.","We can't find a banner to enable."
+Banners,Banners
+"Manage Banners","Manage Banners"
+"This banner no longer exists.","This banner no longer exists."
+"Please, choose the correct menu item in field ""Attach to Menu Item"".","Please, choose the correct menu item in field ""Attach to Menu Item""."
+"You saved the banner.","You saved the banner."
+"Something went wrong while saving the banner.","Something went wrong while saving the banner."
+"You deleted the menu item.","You deleted the menu item."
+"We can't find a menu item to delete.","We can't find a menu item to delete."
+"Menu Items","Menu Items"
+"Manage Menu Items","Manage Menu Items"
+"This menu item no longer exists.","This menu item no longer exists."
+"Edit Menu Item","Edit Menu Item"
+"New Menu Item","New Menu Item"
+"Please, choose the correct menu item in field ""Parent Menu Item"".","Please, choose the correct menu item in field ""Parent Menu Item""."
+"Current menu item can't be its own parent.","Current menu item can't be its own parent."
+"You saved the menu item.","You saved the menu item."
+"Something went wrong while saving the menu item.","Something went wrong while saving the menu item."
+(copy),(copy)
+"You duplicated the menu item.","You duplicated the menu item."
+"The banner that was requested doesn't exist. Verify the banner and try again.","The banner that was requested doesn't exist. Verify the banner and try again."
+"Couldn't find banner(s) attached to menu item ID #%1","Couldn't find banner(s) attached to menu item ID #%1"
+"The banner #%1 couldn't be removed","The banner #%1 couldn't be removed"
+"Couldn't delete banner #%1, because it doesn't exists.","Couldn't delete banner #%1, because it doesn't exists."
+Category,Category
+Page,Page
+Product,Product
+"Custom Link","Custom Link"
+Edit,Edit
+Delete,Delete
+"Delete banner #%1","Delete banner #%1"
+"Are you sure you want to delete a #%1 record?","Are you sure you want to delete a #%1 record?"
+Enable,Enable
+"Enable a banner with ID #%1?","Enable a banner with ID #%1?"
+"Only one banner may be enabled at the same moment. All other banners will be disabled.","Only one banner may be enabled at the same moment. All other banners will be disabled."
+Disable,Disable
+"Disable a banner with ID #%1?","Disable a banner with ID #%1?"
+"Are you sure you want to disable a banner?","Are you sure you want to disable a banner?"
+"-- not attached --","-- not attached --"
+"-- no title --","-- no title --"
+Enabled,Enabled
+Disabled,Disabled
+"-- no parent --","-- no parent --"
+"Delete %1","Delete %1"
+"Are you sure you want to delete a %1 record?","Are you sure you want to delete a %1 record?"
+View,View
+"(no parent)","(no parent)"
+"Delete image","Delete image"
+"Mega Menu","Mega Menu"
+"Save Menu Item","Save Menu Item"
+"Save Banner","Save Banner"
+Link,Link
+"Attach to Menu Item","Attach to Menu Item"
+Description,Description
+"Add optional description. Max. 500 symbols.","Add optional description. Max. 500 symbols."
+"Add New Banner","Add New Banner"
+ID,ID
+Status,Status
+"Menu Item","Menu Item"
+Created,Created
+Modified,Modified
+"Menu Item Information","Menu Item Information"
+Entity,Entity
+Title,Title
+"Parent Menu Item","Parent Menu Item"
+"CSS Class","CSS Class"
+"Sort Order","Sort Order"
+"Store View","Store View"
+"Background Color","Background Color"
+"Applicable only for menu items on the second level in mobile menu.","Applicable only for menu items on the second level in mobile menu."
+"Add New Menu Item","Add New Menu Item"
+Type,Type
+"CSS class","CSS class"

@@ -1,0 +1,87 @@
+Back,Назад
+"Delete Banner","Видалити баннер"
+"Are you sure you want to do this?","Ви впевнені, що хочете це зробити?"
+Save,Зберегти
+"Save & Close","Зберегти та закрити"
+"Delete Menu Item","Видалити пункт меню"
+"Save & Duplicate","Зберегти та дублювати"
+"You deleted the banner.","Ви видалили банер."
+"We can't find a banner to delete.","Ми не можемо знайти банер для видалення."
+"You disabled a banner with ID #%1.","Ви вимкнули банер з ID #%1."
+"We can't find a banner to disable.","Ми не можемо знайти банер для відключення."
+Banner,Банер
+"You enabled a banner with ID #%1.","Ви увімкнули банер з ID #%1."
+"We can't find a banner to enable.","Ми не можемо знайти банер для включення."
+Banners,Банери
+"Manage Banners","Керування банерами"
+"This banner no longer exists.","Цей банер більше не існує."
+"Please, choose the correct menu item in field ""Attach to Menu Item"".","Будь ласка, виберіть правильний пункт меню у полі ""Додати до пункту меню""."
+"You saved the banner.","Ви зберегли банер."
+"Something went wrong while saving the banner.","Щось пішло не так під час збереження банера."
+"You deleted the menu item.","Ви видалили пункт меню."
+"We can't find a menu item to delete.","Ми не можемо знайти пункт меню для видалення"
+"Menu Items","Пункти меню"
+"Manage Menu Items","Керування пунктами меню"
+"This menu item no longer exists.","Цей пункт меню більше не існує."
+"Edit Menu Item","Змінити пункт меню"
+"New Menu Item","Новий пункт меню"
+"Please, choose the correct menu item in field ""Parent Menu Item"".","Будь ласка, виберіть правильний пункт меню в полі ""Батьківський пункт меню""."
+"Current menu item can't be its own parent.","Поточний пункт меню не може бути його власним батьком."
+"You saved the menu item.","Ви зберегли пункт меню."
+"Something went wrong while saving the menu item.","Щось пішло не так під час збереження пункту меню."
+(copy),(копіювати)
+"You duplicated the menu item.","Ви дублювали пункт меню"
+"The banner that was requested doesn't exist. Verify the banner and try again.","Запитаний банер не існує. Перевірте банер і повторіть спробу."
+"Couldn't find banner(s) attached to menu item ID #%1","Не вдалося знайти банери (банери), прикріплені до пункту меню з ID #%1"
+"The banner #%1 couldn't be removed","Баннер #%1 не вдалося видалити."
+"Couldn't delete banner #%1, because it doesn't exists.","Не вдалося видалити банер #%1, тому що він не існує."
+Category,Категорія
+Page,Сторінка
+Product,Продукт
+"Custom Link","Спеціальне посилання"
+Edit,Редагувати
+Delete,Видалити
+"Delete banner #%1","Видалити банер #%1"
+"Are you sure you want to delete a #%1 record?","Ви впевнені, що хочете видалити запис #%1?"
+Enable,Увімкнути
+"Enable a banner with ID #%1?","Увімкнути банер з ID #%1?"
+"Only one banner may be enabled at the same moment. All other banners will be disabled.","Одночасно може бути ввімкнено лише один банер. Усі інші банери будуть вимкнені."
+Disable,Вимкнути
+"Disable a banner with ID #%1?","Вимкнути банер з ID #%1?"
+"Are you sure you want to disable a banner?","Ви впевнені, що хочете вимкнути банер?"
+"-- not attached --","-- не додається --"
+"-- no title --","-- без заголовку --"
+Enabled,Включено
+Disabled,Вимкнено
+"-- no parent --","-- немає батьків --"
+"Delete %1","Видалити %1"
+"Are you sure you want to delete a %1 record?","Ви впевнені, що хочете видалити запис %1?"
+View,Перегляд
+"(no parent)","(без батьків)"
+"All Store Views","Усі перегляди магазинів"
+"Delete image","Видалити зображення"
+"Mega Menu","Мега Меню"
+"Save Menu Item","Зберегти элемент меню"
+"Save Banner","Зберегти банер"
+Link,Посилання
+"Attach to Menu Item","Додати до пункту меню"
+Description,Опис
+"Add optional description. Max. 500 symbols.","Додати необов'язковий опис. Макс. 500 символів."
+"Add New Banner","Додати новий банер"
+ID,ID
+Status,Статус
+"Menu Item","Пункт меню"
+Created,Створено
+Modified,Змінено
+"Menu Item Information","Інформація про пункт меню"
+Entity,Сутність
+Title,Заголовок
+"Parent Menu Item","Батьківський пункт меню"
+"CSS Class","CSS-клас"
+"Sort Order","Порядок сортування"
+"Store View","Перегляд магазину"
+"Background Color","Колір фону"
+"Applicable only for menu items on the second level in mobile menu.","Застосовується лише до пунктів меню другого рівня в меню мобільних пристроїв."
+"Add New Menu Item","Додати новий элемент меню"
+Type,Тип
+"CSS class","CSS-клас"

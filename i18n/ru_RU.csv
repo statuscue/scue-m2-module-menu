@@ -1,0 +1,87 @@
+Back,Назад
+"Delete Banner","Удалить баннер"
+"Are you sure you want to do this?","Вы уверены, что хотите это сделать?"
+Save,Сохранить
+"Save & Close","Сохранить и закрыть"
+"Delete Menu Item","Удалить элемент меню"
+"Save & Duplicate","Сохранить и дублировать"
+"You deleted the banner.","Вы удалили баннер."
+"We can't find a banner to delete.","Мы не можем найти баннер для удаления."
+"You disabled a banner with ID #%1.","Вы отключили баннер с ID #%1."
+"We can't find a banner to disable.","Мы не можем найти баннер, который нужно отключить."
+Banner,Banner
+"You enabled a banner with ID #%1.","Вы включили баннер с ID #%1."
+"We can't find a banner to enable.","Мы не можем найти баннер для включения."
+Banners,Баннеры
+"Manage Banners","Управление баннерами"
+"This banner no longer exists.","Этот баннер больше не существует."
+"Please, choose the correct menu item in field ""Attach to Menu Item"".","Пожалуйста, выберите правильный пункт меню в поле ""Прикрепить к пункту меню""."
+"You saved the banner.","Вы сохранили баннер."
+"Something went wrong while saving the banner.","Что-то пошло не так при сохранении баннера."
+"You deleted the menu item.","Вы удалили пункт меню."
+"We can't find a menu item to delete.","Мы не можем найти элемент меню для удаления"
+"Menu Items","Пункты меню"
+"Manage Menu Items","Управление пунктами меню"
+"This menu item no longer exists.","Этот пункт меню больше не существует."
+"Edit Menu Item","Изменить элемент меню"
+"New Menu Item","Новый элемент меню"
+"Please, choose the correct menu item in field ""Parent Menu Item"".","Пожалуйста, выберите правильный пункт меню в поле ""Родительский пункт меню""."
+"Current menu item can't be its own parent.","Текущий пункт меню не может быть собственным родителем."
+"You saved the menu item.","Вы сохранили пункт меню"
+"Something went wrong while saving the menu item.","Что-то пошло не так при сохранении пункта меню."
+(copy),(копировать)
+"You duplicated the menu item.","Вы продублировали пункт меню."
+"The banner that was requested doesn't exist. Verify the banner and try again.","Запрошенный баннер не существует. Проверьте баннер и повторите попытку."
+"Couldn't find banner(s) attached to menu item ID #%1","Не удалось найти баннеры, прикрепленные к элементу меню с ID #%1"
+"The banner #%1 couldn't be removed","Баннер #%1 не может быть удален."
+"Couldn't delete banner #%1, because it doesn't exists.","Не удалось удалить баннер #%1, потому что он не существует."
+Category,Категория
+Page,Страница
+Product,Продукт
+"Custom Link","Пользовательская ссылка"
+Edit,Редактировать
+Delete,Удалить
+"Delete banner #%1","Удалить баннер #%1"
+"Are you sure you want to delete a #%1 record?","Вы действительно хотите удалить запись #%1?"
+Enable,Включить
+"Enable a banner with ID #%1?","Включить баннер с ID #%1?"
+"Only one banner may be enabled at the same moment. All other banners will be disabled.","Одновременно может быть включен только один баннер. Все остальные баннеры будут отключены."
+Disable,Отключить
+"Disable a banner with ID #%1?","Отключить баннер с ID #%1?"
+"Are you sure you want to disable a banner?","Вы действительно хотите отключить баннер?"
+"-- not attached --","-- не прикреплено --"
+"-- no title --","-- без названия --"
+Enabled,Включено
+Disabled,Отключено
+"-- no parent --","-- без родителя --"
+"Delete %1","Удалить %1"
+"Are you sure you want to delete a %1 record?","Вы уверены, что хотите удалить запись %1?"
+View,Просмотр
+"(no parent)","(без родителя)"
+"All Store Views","Все просмотры магазина"
+"Delete image","Удалить изображение"
+"Mega Menu","Мега Меню"
+"Save Menu Item","Сохранить элемент меню"
+"Save Banner","Сохранить баннер"
+Link,Ссылка
+"Attach to Menu Item","Присоединить к элементу меню"
+Description,Описание
+"Add optional description. Max. 500 symbols.","Добавить необязательное описание. Макс. 500 символов."
+"Add New Banner","Добавить новый баннер"
+ID,ID
+Status,Статус
+"Menu Item","Пункт меню"
+Created,Создано
+Modified,Изменено
+"Menu Item Information","Информация о пункте меню"
+Entity,Сущность
+Title,Заголовок
+"Parent Menu Item","Элемент родительского меню"
+"CSS Class","CSS-класс"
+"Sort Order","Порядок сортировки"
+"Store View","Просмотр магазина"
+"Background Color","Фоновый цвет"
+"Applicable only for menu items on the second level in mobile menu.","Применяется только для пунктов меню на втором уровне в мобильном меню."
+"Add New Menu Item","Добавить новый элемент меню"
+Type,Тип
+"CSS class","CSS-класс"

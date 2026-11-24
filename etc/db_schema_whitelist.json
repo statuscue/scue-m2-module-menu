@@ -1,0 +1,75 @@
+{
+    "scue_menu_items": {
+        "column": {
+            "menu_item_id": true,
+            "entity_type": true,
+            "title": true,
+            "parent_id": true,
+            "css_class": true,
+            "sort_order": true,
+            "creation_time": true,
+            "update_time": true,
+            "store_id": true,
+            "related_entity_id": true,
+            "custom_link": true,
+            "bg_color": true,
+            "bg_image": true
+        },
+        "index": {
+            "SCUE_MENU_ITEMS_PARENT_ID": true,
+            "SCUE_MENU_ITEMS_TITLE": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "scue_menu_items_relation": {
+        "column": {
+            "menu_item_id": true,
+            "related_entity_id": true
+        },
+        "index": {
+            "SCUE_MENU_ITEMS_RELATION_RELATED_ENTITY_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_43681A3C2ACC83373757FAACD17CF270": true
+        }
+    },
+    "scue_menu_items_custom_links": {
+        "column": {
+            "menu_item_id": true,
+            "link": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_FECBB954FC2D0C0D375DC7215F9136B7": true
+        }
+    },
+    "scue_menu_banners": {
+        "column": {
+            "banner_id": true,
+            "title": true,
+            "creation_time": true,
+            "update_time": true,
+            "path": true,
+            "description": true,
+            "is_active": true,
+            "menu_item_id": true,
+            "entity_type": true,
+            "related_entity_id": true,
+            "custom_link": true
+        },
+        "index": {
+            "SCUE_MENU_BANNERS_BANNER_ID": true,
+            "SCUE_MENU_BANNERS_TITLE": true,
+            "SCUE_MENU_BANNERS_IS_ACTIVE": true,
+            "SCUE_MENU_BANNERS_DESCRIPTION": true,
+            "SCUE_MENU_BANNERS_MENU_ITEM_ID_IS_ACTIVE": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "FK_7D0AC188114B5A1D684D9BA055D4B0A1": true
+        }
+    }
+}

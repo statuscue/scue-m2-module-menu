@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">scue_menu_banner_form.scue_menu_banner_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Banner</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save" class="Scue\Menu\Block\Adminhtml\Banner\Edit\SaveButton"/>
+            <button name="delete" class="Scue\Menu\Block\Adminhtml\Banner\Edit\DeleteButton"/>
+            <button name="back" class="Scue\Menu\Block\Adminhtml\Banner\Edit\BackButton"/>
+        </buttons>
+        <namespace>scue_menu_banner_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>scue_menu_banner_form.scue_menu_banner_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="scue_menu_banner_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="scue_menu/banner/save"/>
+        </settings>
+        <dataProvider class="Scue\Menu\Ui\Component\Banner\Form\DataProvider" name="scue_menu_banner_form_data_source">
+            <settings>
+                <requestFieldName>banner_id</requestFieldName>
+                <primaryFieldName>banner_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label/>
+        </settings>
+        <field name="banner_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">banner</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>banner_id</dataScope>
+            </settings>
+        </field>
+        <field name="is_active" formElement="checkbox" sortOrder="10">
+            <settings>
+                <label translate="true">Enabled</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <checkbox>
+                    <settings>
+                        <prefer>toggle</prefer>
+                        <valueMap>
+                            <map name="true" xsi:type="number">1</map>
+                            <map name="false" xsi:type="number">0</map>
+                        </valueMap>
+                    </settings>
+                </checkbox>
+            </formElements>
+        </field>
+        <field name="banner" formElement="imageUploader" sortOrder="20">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">banner</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Banner</label>
+                <componentType>imageUploader</componentType>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <imageUploader>
+                    <settings>
+                        <required>true</required>
+                        <previewTmpl>Scue_Menu/image-preview</previewTmpl>
+                        <allowedExtensions>jpg jpeg gif png</allowedExtensions>
+                        <uploaderConfig>
+                            <param xsi:type="string" name="url">scue_menu/banner/upload</param>
+                        </uploaderConfig>
+                    </settings>
+                </imageUploader>
+            </formElements>
+        </field>
+        <field name="link" formElement="urlInput" sortOrder="30">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="urlTypes" xsi:type="object">Magento\Ui\Model\UrlInput\LinksConfigProvider</item>
+                    <item name="isDisplayAdditionalSettings" xsi:type="boolean">false</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Link</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="menu_item_id" formElement="select" component="Magento_Ui/js/form/element/ui-select" sortOrder="40">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filterOptions" xsi:type="boolean">true</item>
+                    <item name="multiple" xsi:type="boolean">false</item>
+                    <item name="showCheckbox" xsi:type="boolean">false</item>
+                    <item name="disableLabel" xsi:type="boolean">true</item>
+                    <item name="isRemoveSelectedIcon" xsi:type="boolean">false</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>int</dataType>
+                <dataScope>menu_item_id</dataScope>
+                <label translate="true">Attach to Menu Item</label>
+                <elementTmpl>ui/grid/filters/elements/ui-select</elementTmpl>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Scue\Menu\Ui\Component\Banner\Form\Item\OptionsByStoreView"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="description" formElement="textarea" sortOrder="50">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">banner</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Description</label>
+                <tooltip>
+                    <description translate="true">Add optional description. Max. 500 symbols.</description>
+                </tooltip>
+                <dataType>text</dataType>
+                <dataScope>description</dataScope>
+            </settings>
+            <formElements>
+                <textarea>
+                    <settings>
+                        <cols>15</cols>
+                        <rows>5</rows>
+                    </settings>
+                </textarea>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">scue_menu_banner_listing.scue_menu_banner_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Add New Banner</label>
+            </button>
+        </buttons>
+        <spinner>scue_menu_banner_columns</spinner>
+        <deps>
+            <dep>scue_menu_banner_listing.scue_menu_banner_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="scue_menu_banner_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">banner_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Scue_Menu::banners</aclResource>
+        <dataProvider class="Scue\Menu\Ui\Component\Banner\Listing\DataProvider" name="scue_menu_banner_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>banner_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filterSearch name="fulltext"/>
+        <filters name="listing_filters">
+            <argument name="data" xsi:type="array">
+                <item name="observers" xsi:type="array">
+                    <item name="column" xsi:type="string">column</item>
+                </item>
+            </argument>
+            <settings>
+                <templates>
+                    <filters>
+                        <select>
+                            <param name="template" xsi:type="string">ui/grid/filters/elements/ui-select</param>
+                            <param name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</param>
+                        </select>
+                    </filters>
+                </templates>
+            </settings>
+        </filters>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="scue_menu_banner_columns">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="resizeConfig" xsi:type="array">
+                    <item name="enabled" xsi:type="boolean">true</item>
+                </item>
+            </item>
+        </argument>
+        <column name="banner_id" sortOrder="20">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+                <resizeEnabled>true</resizeEnabled>
+                <resizeDefaultWidth>67</resizeDefaultWidth>
+            </settings>
+        </column>
+        <column name="banner" class="Scue\Menu\Ui\Component\Banner\Listing\Column\Banner" component="Magento_Ui/js/grid/columns/thumbnail" sortOrder="10">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="align" xsi:type="string">center</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Banner</label>
+                <altField>description</altField>
+                <hasPreview>1</hasPreview>
+                <sortable>false</sortable>
+            </settings>
+        </column>
+        <column name="description" sortOrder="30">
+            <settings>
+                <label translate="true">Description</label>
+                <resizeEnabled>true</resizeEnabled>
+            </settings>
+        </column>
+        <column name="status" class="Scue\Menu\Ui\Component\Banner\Listing\Column\Status" sortOrder="40">
+            <settings>
+                <label translate="true">Status</label>
+            </settings>
+        </column>
+        <column name="menu_item" class="Scue\Menu\Ui\Component\Banner\Listing\Column\MenuItem" component="Magento_Ui/js/grid/columns/link" sortOrder="50">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="link" xsi:type="string">menu_item_link</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Menu Item</label>
+                <sortable>false</sortable>
+            </settings>
+        </column>
+        <column name="creation_time" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date" sortOrder="80">
+            <settings>
+                <label translate="true">Created</label>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <resizeEnabled>true</resizeEnabled>
+                <resizeDefaultWidth>177</resizeDefaultWidth>
+            </settings>
+        </column>
+        <column name="update_time" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date" sortOrder="90">
+            <settings>
+                <label translate="true">Modified</label>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <resizeEnabled>true</resizeEnabled>
+                <resizeDefaultWidth>177</resizeDefaultWidth>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="Scue\Menu\Ui\Component\Banner\Listing\Column\Actions" sortOrder="100">
+            <settings>
+                <indexField>banner_id</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>107</resizeDefaultWidth>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>

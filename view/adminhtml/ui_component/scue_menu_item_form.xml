@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">scue_menu_item_form.scue_menu_item_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Menu Item Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save" class="Scue\Menu\Block\Adminhtml\Item\Edit\SaveButton"/>
+            <button name="delete" class="Scue\Menu\Block\Adminhtml\Item\Edit\DeleteButton"/>
+            <button name="back" class="Scue\Menu\Block\Adminhtml\Item\Edit\BackButton"/>
+        </buttons>
+        <namespace>scue_menu_item_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>scue_menu_item_form.scue_menu_item_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="scue_menu_item_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="scue_menu/item/save"/>
+        </settings>
+        <dataProvider class="Scue\Menu\Ui\Component\Form\DataProvider" name="scue_menu_item_form_data_source">
+            <settings>
+                <requestFieldName>menu_item_id</requestFieldName>
+                <primaryFieldName>menu_item_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="general">
+        <settings>
+            <label/>
+        </settings>
+        <field name="menu_item_id" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">menu_item</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <visible>false</visible>
+                <dataScope>menu_item_id</dataScope>
+            </settings>
+        </field>
+        <field name="entity" sortOrder="10" formElement="urlInput">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="urlTypes" xsi:type="object">Magento\Ui\Model\UrlInput\LinksConfigProvider</item>
+                    <item name="isDisplayAdditionalSettings" xsi:type="boolean">false</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Entity</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="title" sortOrder="20" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">menu_item</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>text</dataType>
+                <label translate="true">Title</label>
+                <dataScope>title</dataScope>
+            </settings>
+        </field>
+        <field name="parent_id" sortOrder="30" formElement="select" component="Magento_Ui/js/form/element/ui-select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filterOptions" xsi:type="boolean">true</item>
+                    <item name="multiple" xsi:type="boolean">false</item>
+                    <item name="showCheckbox" xsi:type="boolean">false</item>
+                    <item name="disableLabel" xsi:type="boolean">true</item>
+                    <item name="isRemoveSelectedIcon" xsi:type="boolean">false</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>int</dataType>
+                <dataScope>parent_id</dataScope>
+                <label translate="true">Parent Menu Item</label>
+                <elementTmpl>ui/grid/filters/elements/ui-select</elementTmpl>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Scue\Menu\Ui\Component\Form\Items\Options"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <field name="css_class" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">menu_item</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">CSS Class</label>
+                <dataScope>css_class</dataScope>
+            </settings>
+        </field>
+        <field name="sort_order" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">menu_item</item>
+                    <item name="default" xsi:type="number">10</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>int</dataType>
+                <label translate="true">Sort Order</label>
+                <dataScope>sort_order</dataScope>
+            </settings>
+        </field>
+        <field name="storeviews" formElement="select" class="Magento\Store\Ui\Component\Form\Field\StoreView">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filterOptions" xsi:type="boolean">true</item>
+                    <item name="multiple" xsi:type="boolean">false</item>
+                    <item name="showCheckbox" xsi:type="boolean">false</item>
+                    <item name="disableLabel" xsi:type="boolean">true</item>
+                    <item name="isRemoveSelectedIcon" xsi:type="boolean">false</item>
+                    <item name="source" xsi:type="string">block</item>
+                    <item name="default" xsi:type="number">0</item>
+                </item>
+            </argument>
+            <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+                <dataType>int</dataType>
+                <label translate="true">Store View</label>
+                <dataScope>store_id</dataScope>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Scue\Menu\Ui\Component\Listing\Column\Store\Options"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+        <colorPicker name="bg_color" class="Magento\Ui\Component\Form\Element\ColorPicker" component="Magento_Ui/js/form/element/color-picker">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">menu_item</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <dataScope>bg_color</dataScope>
+                <label translate="true">Background Color</label>
+                <notice translate="true">Applicable only for menu items on the second level in mobile menu.</notice>
+                <elementTmpl>ui/form/element/color-picker</elementTmpl>
+                <colorFormat>hex</colorFormat>
+                <colorPickerMode>noalpha</colorPickerMode>
+            </settings>
+        </colorPicker>
+        <field name="bg_image" formElement="imageUploader">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">menu_item</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <dataScope>menu_item_bg</dataScope>
+                <label translate="true">Background Image</label>
+                <notice translate="true">Applicable only for menu items on the second level in mobile menu.</notice>
+                <componentType>imageUploader</componentType>
+            </settings>
+            <formElements>
+                <imageUploader>
+                    <settings>
+                        <required>false</required>
+                        <previewTmpl>Scue_Menu/image-preview</previewTmpl>
+                        <allowedExtensions>jpg jpeg png</allowedExtensions>
+                        <uploaderConfig>
+                            <param xsi:type="string" name="url">scue_menu/item/upload</param>
+                        </uploaderConfig>
+                    </settings>
+                </imageUploader>
+            </formElements>
+        </field>
+    </fieldset>
+</form>
